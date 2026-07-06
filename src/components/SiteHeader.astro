@@ -22,9 +22,10 @@ const current = Astro.url.pathname.replace(/\/$/, "");
             <li>
               <a
                 href={`/${c.slug}`}
+                aria-current={current === `/${c.slug}` ? "page" : undefined}
                 class:list={[
-                  "font-sans text-sm font-bold uppercase tracking-widest hover:text-brand",
-                  current === `/${c.slug}` && "text-brand",
+                  "font-sans text-sm font-bold uppercase tracking-widest hover:text-brand hover:underline decoration-2 underline-offset-4",
+                  current === `/${c.slug}` && "text-brand underline",
                 ]}
               >
                 {c.label}
