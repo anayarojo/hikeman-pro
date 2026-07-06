@@ -1,0 +1,48 @@
+---
+import Icon from "./Icon.astro";
+
+const benefits = [
+  { icon: "shield", label: "Garantía de por vida" },
+  { icon: "mountain", label: "Probado en montaña" },
+  { icon: "compass", label: "Asesoría experta" },
+  { icon: "backpack", label: "Envío a todo el país" },
+] as const;
+---
+
+<footer>
+  <section class="w-full bg-carbon text-white">
+    <ul
+      class="mx-auto grid max-w-6xl grid-cols-2 gap-8 px-4 py-10 md:grid-cols-4"
+    >
+      {
+        benefits.map((b) => (
+          <li class="flex flex-col items-center gap-3 text-center">
+            <Icon name={b.icon} class="h-10 w-10" />
+            <span class="text-xs font-bold uppercase tracking-widest">
+              {b.label}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+  <section class="w-full bg-ink text-white">
+    <div
+      class="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-10 text-center"
+    >
+      <p class="font-display text-3xl uppercase md:text-4xl">
+        Equípate hoy y <span class="text-brand">conquista la montaña</span>
+      </p>
+      <a
+        href="tel:+525512345678"
+        class="flex items-center gap-3 bg-brand px-8 py-4 font-display text-2xl uppercase text-ink hover:bg-gold"
+      >
+        <Icon name="phone" class="h-6 w-6" />
+        55 1234 5678
+      </a>
+      <p class="text-xs text-line">
+        © 2026 HikeMan Pro. Equipamiento outdoor profesional.
+      </p>
+    </div>
+  </section>
+</footer>

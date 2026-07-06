@@ -1,0 +1,38 @@
+---
+import { CATEGORIES } from "../data/products";
+import Icon from "./Icon.astro";
+
+const current = Astro.url.pathname.replace(/\/$/, "");
+---
+
+<header class="border-b border-line bg-white">
+  <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-6">
+    <a href="/" class="flex items-center gap-3">
+      <span class="bg-ink p-2 text-white">
+        <Icon name="mountain" class="h-7 w-7" />
+      </span>
+      <span class="font-display text-4xl uppercase tracking-wide">
+        HikeMan <span class="text-brand">Pro</span>
+      </span>
+    </a>
+    <nav aria-label="Categorías">
+      <ul class="flex flex-wrap justify-center gap-x-8 gap-y-2">
+        {
+          CATEGORIES.map((c) => (
+            <li>
+              <a
+                href={`/${c.slug}`}
+                class:list={[
+                  "font-sans text-sm font-bold uppercase tracking-widest hover:text-brand",
+                  current === `/${c.slug}` && "text-brand",
+                ]}
+              >
+                {c.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
