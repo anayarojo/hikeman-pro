@@ -72,8 +72,8 @@ export const PRODUCTS: Product[] = [
   { id: "moc-tactica-verde", category: "mochilas", name: "Mochila Táctica 40L Verde", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-verde.webp" },
   { id: "moc-tactica-militar", category: "mochilas", name: "Mochila Táctica 40L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-militar-1.webp", featured: true },
   // Protección (Viboreras)
-  { id: "vib-negras", category: "viboreras", name: "Polainas Viboreras Negras", price: 300, unit: "C/U", image: "/products/viboreras-negras.webp", featured: true },
-  { id: "vib-verdes", category: "viboreras", name: "Polainas Viboreras Verdes", price: 300, unit: "C/U", image: "/products/viboreras-verdes.webp" },
-  { id: "vib-militares", category: "viboreras", name: "Polainas Viboreras Patrones Militares", price: 300, unit: "C/U", image: "/products/viboreras-con-patrones.webp" },
-  { id: "vib-camuflaje", category: "viboreras", name: "Polainas Viboreras Reforzadas Con Camuflaje", price: 350, unit: "C/U", image: "/products/viboreras-reforzadas-con-camuflaje.webp", featured: true },
+  { id: "vib-negras", category: "viboreras", name: "Polainas Viboreras Negras", price: 300, unit: "PAR", image: "/products/viboreras-negras.webp", featured: true },
+  { id: "vib-verdes", category: "viboreras", name: "Polainas Viboreras Verdes", price: 300, unit: "PAR", image: "/products/viboreras-verdes.webp" },
+  { id: "vib-militares", category: "viboreras", name: "Polainas Viboreras Patrones Militares", price: 300, unit: "PAR", image: "/products/viboreras-con-patrones.webp" },
+  { id: "vib-camuflaje", category: "viboreras", name: "Polainas Viboreras Reforzadas Con Camuflaje", price: 350, unit: "PAR", image: "/products/viboreras-reforzadas-con-camuflaje.webp", featured: true },
 ];
