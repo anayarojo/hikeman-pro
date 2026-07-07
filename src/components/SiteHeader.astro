@@ -1,6 +1,5 @@
 ---
 import { CATEGORIES } from "../data/products";
-import Icon from "./Icon.astro";
 
 const current = Astro.url.pathname.replace(/\/$/, "");
 ---
@@ -8,9 +7,7 @@ const current = Astro.url.pathname.replace(/\/$/, "");
 <header class="border-b border-line bg-white">
   <div class="mx-auto flex max-w-6xl flex-col items-center gap-3 px-4 py-6">
     <a href="/" class="flex items-center gap-3">
-      <span class="bg-ink p-2 text-white">
-        <Icon name="mountain" class="h-7 w-7" />
-      </span>
+      <img src="/favicon.svg" alt="" class="h-14 w-14" />
       <span class="font-display text-4xl uppercase tracking-wide">
         HikeMan <span class="text-brand">Pro</span>
       </span>
