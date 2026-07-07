@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
   { id: "lam-uv", category: "iluminacion", name: "Lámpara de Mano Ultravioleta", price: 150, unit: "C/U", image: "/products/lampara-ultravioleta.webp", promo: "2 X $200", featured: true },
   { id: "laser-verde", category: "iluminacion", name: "Láser Potente Recargable Verde", price: 150, unit: "C/U", image: "/products/laser-verde.webp" },
   // Mochilas
-  { id: "moc-acampar-80l", category: "mochilas", name: "Mochila Para Acampar 80L Negra", price: 400, unit: "C/U", image: "/products/mochila-acampar-80l.webp", featured: true },
+  { id: "moc-acampar-80l", category: "mochilas", name: "Mochila Para Acampar 80L Negra", price: 650, unit: "C/U", image: "/products/mochila-acampar-80l.webp", promo: "PROMO $500", featured: true },
   { id: "moc-tactica-negra", category: "mochilas", name: "Mochila Táctica 40L Negra", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-negra.webp" },
   { id: "moc-tactica-cafe", category: "mochilas", name: "Mochila Táctica 40L Café", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-cafe.webp" },
   { id: "moc-tactica-verde", category: "mochilas", name: "Mochila Táctica 40L Verde", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-verde.webp" },
