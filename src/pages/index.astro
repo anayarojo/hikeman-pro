@@ -1,7 +1,29 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PromoBanner from "../components/PromoBanner.astro";
+import ProductGrid from "../components/ProductGrid.vue";
+import { CATEGORIES, PRODUCTS } from "../data/products";
+
+const featured = PRODUCTS.filter((p) => p.featured);
+const fillers = PRODUCTS.filter((p) => !p.featured);
+const showcase = [...featured, ...fillers].slice(0, 9);
 ---
 
-<BaseLayout title="Inicio">
-  <h1 class="font-display text-5xl uppercase">HikeMan Pro</h1>
+<BaseLayout title="Equipo de senderismo y aventura">
+  <PromoBanner
+    message="TEMPORADA DE MONTAÑA — HASTA 9 PRODUCTOS ESENCIALES PARA TU PRÓXIMA RUTA"
+  />
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <h1 class="mb-2 text-center font-display text-4xl uppercase md:text-5xl">
+      Equipo <span class="text-brand">esencial</span> de aventura
+    </h1>
+    <p
+      class="mb-8 text-center text-sm font-bold uppercase tracking-widest text-steel"
+    >
+      Selección destacada de nuestras {CATEGORIES.length} categorías
+    </p>
+    <div class="border border-line">
+      <ProductGrid client:load products={showcase} />
+    </div>
+  </section>
 </BaseLayout>
