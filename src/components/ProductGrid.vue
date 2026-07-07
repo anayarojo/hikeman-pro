@@ -49,7 +49,9 @@ const sorted = computed(() => sortProducts(props.products, order.value));
         >
           {{ product.name }}
         </h3>
-        <p class="mt-1 text-xs text-steel">{{ product.detail }}</p>
+        <p v-if="product.detail" class="mt-1 text-xs text-steel">
+          {{ product.detail }}
+        </p>
         <p class="mt-4 inline-flex items-end gap-1.5 bg-brand px-5 py-2">
           <span class="font-display text-3xl leading-none">
             {{ formatPrice(product.price) }}
@@ -57,6 +59,12 @@ const sorted = computed(() => sortProducts(props.products, order.value));
           <span class="text-[10px] font-extrabold leading-none pb-0.5">
             {{ product.unit }}
           </span>
+        </p>
+        <p
+          v-if="product.promo"
+          class="mt-2 bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-white"
+        >
+          {{ product.promo }}
         </p>
       </li>
     </ul>

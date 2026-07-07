@@ -2,13 +2,12 @@ import { describe, expect, it } from "vitest";
 import { CATEGORIES, PRODUCTS } from "../src/data/products";
 
 describe("catálogo", () => {
-  it("define las 5 categorías con slug y etiqueta", () => {
+  it("define las 4 categorías con slug y etiqueta", () => {
     expect(CATEGORIES.map((c) => c.slug)).toEqual([
-      "viboreras",
       "bastones",
-      "lamparas",
+      "iluminacion",
       "mochilas",
-      "guias",
+      "viboreras",
     ]);
     for (const c of CATEGORIES) {
       expect(c.label.length).toBeGreaterThan(0);

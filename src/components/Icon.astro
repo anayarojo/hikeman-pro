@@ -1,6 +1,13 @@
 ---
 interface Props {
-  name: "shield" | "mountain" | "compass" | "backpack" | "phone";
+  name:
+    | "shield"
+    | "mountain"
+    | "compass"
+    | "backpack"
+    | "phone"
+    | "lock"
+    | "boot";
   class?: string;
 }
 
@@ -10,13 +17,17 @@ const paths: Record<Props["name"], string> = {
   shield:
     "M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z M9.5 12l2 2 3.5-4",
   mountain:
-    "M3 19h18 M5 19l5-9 3 5 2-3 4 7 M10 10l1.5 2.5L13 10",
+    "M8 4l4 7 4.5-4.5L21 19H3L8 4z M6.7 8l1.3 1.2 1.3-1.2 1 .9",
   compass:
     "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z M15 9l-2 5-4 1 2-5 4-1z",
   backpack:
     "M8 7V5a4 4 0 0 1 8 0v2 M6 7h12a1 1 0 0 1 1 1v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8a1 1 0 0 1 1-1z M8 13h8 M8 13v4",
   phone:
     "M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z",
+  lock:
+    "M7 11V8a5 5 0 0 1 10 0v3 M6 11h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1z M12 15v2",
+  boot:
+    "M5 3h6v7l5 2a4 4 0 0 1 3 4v2H5V3z M5 15h14 M7 6h2 M7 9h2",
 };
 ---
 

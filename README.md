@@ -1,6 +1,8 @@
 # HikeMan Pro
 
-Catálogo web de equipo de senderismo: viboreras, bastones, lámparas, mochilas y guías.
+Equípate, explora y vive la aventura.
+
+Catálogo web de equipo de senderismo: bastones, iluminación y equipo, mochilas y protección (polainas viboreras).
 
 ## Stack
 
