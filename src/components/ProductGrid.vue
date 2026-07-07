@@ -87,13 +87,25 @@ onBeforeUnmount(() => {
         <p v-if="product.detail" class="mt-1 text-xs text-steel">
           {{ product.detail }}
         </p>
-        <p class="mt-4 inline-flex items-end gap-1.5 bg-brand px-5 py-2">
-          <span class="font-display text-3xl leading-none">
+        <p class="mt-4 inline-flex items-end gap-2 bg-brand px-5 py-2">
+          <span
+            v-if="product.promoPrice"
+            class="pb-0.5 text-sm font-bold leading-none line-through opacity-60"
+          >
             {{ formatPrice(product.price) }}
+          </span>
+          <span class="font-display text-3xl leading-none">
+            {{ formatPrice(product.promoPrice ?? product.price) }}
           </span>
           <span class="text-[10px] font-extrabold leading-none pb-0.5">
             {{ product.unit }}
           </span>
+        </p>
+        <p
+          v-if="product.promoPrice"
+          class="mt-2 bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-white"
+        >
+          Precio especial
         </p>
         <p
           v-if="product.promo"
