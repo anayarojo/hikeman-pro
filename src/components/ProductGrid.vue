@@ -58,7 +58,9 @@ onBeforeUnmount(() => {
       </select>
     </div>
 
-    <ul class="grid grid-cols-1 gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+    <ul
+      class="product-grid grid grid-cols-1 gap-px bg-line sm:grid-cols-2 lg:grid-cols-3"
+    >
       <li
         v-for="product in sorted"
         :key="product.id"
@@ -138,3 +140,12 @@ onBeforeUnmount(() => {
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Rellena de blanco las celdas sobrantes de la última fila del grid */
+.product-grid::after {
+  content: "";
+  grid-column: auto / -1;
+  background: #fff;
+}
+</style>
