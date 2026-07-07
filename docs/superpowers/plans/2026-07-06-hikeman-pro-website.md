@@ -173,7 +173,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "Equipo profesional de senderismo y aventura." } =
+const { title, description = "Equipo de senderismo y aventura." } =
   Astro.props;
 ---
 
