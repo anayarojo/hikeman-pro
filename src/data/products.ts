@@ -61,15 +61,15 @@ export const PRODUCTS: Product[] = [
   { id: "bas-rojo", category: "bastones", name: "Bastones Rojos", price: 300, unit: "PAR", image: PLACEHOLDER },
   { id: "bas-azul", category: "bastones", name: "Bastones Azules", price: 300, unit: "PAR", image: PLACEHOLDER },
   // Iluminación y Equipo
-  { id: "lam-minera", category: "iluminacion", name: "Lámpara Minera 6000 mAh", price: 400, unit: "C/U", image: PLACEHOLDER, featured: true },
-  { id: "lam-multicolor", category: "iluminacion", name: "Lámpara Multicolor 4800 mAh", price: 400, unit: "C/U", image: PLACEHOLDER, featured: true },
-  { id: "lam-uv", category: "iluminacion", name: "Lámpara de Mano Ultravioleta", price: 150, unit: "C/U", image: PLACEHOLDER, promo: "2 X $200", featured: true },
-  { id: "laser-verde", category: "iluminacion", name: "Láser Potente Recargable Verde", price: 150, unit: "C/U", image: PLACEHOLDER },
+  { id: "lam-minera", category: "iluminacion", name: "Lámpara Minera 6000 mAh", price: 400, unit: "C/U", image: "/products/lampara-600-mah.png", featured: true },
+  { id: "lam-multicolor", category: "iluminacion", name: "Lámpara Multicolor 4800 mAh", price: 400, unit: "C/U", image: "/products/lampara-multi-color.png", featured: true },
+  { id: "lam-uv", category: "iluminacion", name: "Lámpara de Mano Ultravioleta", price: 150, unit: "C/U", image: "/products/lampara-ultravioleta.png", promo: "2 X $200", featured: true },
+  { id: "laser-verde", category: "iluminacion", name: "Láser Potente Recargable Verde", price: 150, unit: "C/U", image: "/products/laser-verde.png" },
   // Mochilas
-  { id: "moc-acampar-80l", category: "mochilas", name: "Mochila Para Acampar 80L Negra", price: 400, unit: "C/U", image: PLACEHOLDER, featured: true },
+  { id: "moc-acampar-80l", category: "mochilas", name: "Mochila Para Acampar 80L Negra", price: 400, unit: "C/U", image: "/products/mochila-acampar-80l.png", featured: true },
   { id: "moc-tactica-negra", category: "mochilas", name: "Mochila Táctica 40L Negra", price: 400, unit: "C/U", image: PLACEHOLDER },
-  { id: "moc-tactica-cafe", category: "mochilas", name: "Mochila Táctica 40L Café", price: 400, unit: "C/U", image: PLACEHOLDER },
-  { id: "moc-tactica-verde", category: "mochilas", name: "Mochila Táctica 40L Verde", price: 400, unit: "C/U", image: PLACEHOLDER },
+  { id: "moc-tactica-cafe", category: "mochilas", name: "Mochila Táctica 40L Café", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-cafe.png" },
+  { id: "moc-tactica-verde", category: "mochilas", name: "Mochila Táctica 40L Verde", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-verde.png" },
   { id: "moc-tactica-militar", category: "mochilas", name: "Mochila Táctica 40L Militar", price: 400, unit: "C/U", image: PLACEHOLDER, featured: true },
   // Protección (Viboreras)
   { id: "vib-negras", category: "viboreras", name: "Polainas Viboreras Negras", price: 300, unit: "C/U", image: PLACEHOLDER, featured: true },

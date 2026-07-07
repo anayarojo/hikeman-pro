@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, onBeforeUnmount, ref, watch } from "vue";
 import type { Product } from "../data/products";
 import { formatPrice } from "../lib/format";
 import { sortProducts, type SortOrder } from "../lib/sortProducts";
@@ -8,6 +8,34 @@ const props = defineProps<{ products: Product[] }>();
 
 const order = ref<SortOrder>("featured");
 const sorted = computed(() => sortProducts(props.products, order.value));
+
+const zoomed = ref<Product | null>(null);
+
+function openZoom(product: Product) {
+  zoomed.value = product;
+}
+
+function closeZoom() {
+  zoomed.value = null;
+}
+
+function onKeydown(event: KeyboardEvent) {
+  if (event.key === "Escape") closeZoom();
+}
+
+watch(zoomed, (value) => {
+  document.body.style.overflow = value ? "hidden" : "";
+  if (value) {
+    window.addEventListener("keydown", onKeydown);
+  } else {
+    window.removeEventListener("keydown", onKeydown);
+  }
+});
+
+onBeforeUnmount(() => {
+  document.body.style.overflow = "";
+  window.removeEventListener("keydown", onKeydown);
+});
 </script>
 
 <template>
@@ -36,14 +64,21 @@ const sorted = computed(() => sortProducts(props.products, order.value));
         :key="product.id"
         class="flex flex-col items-center bg-white p-8 text-center"
       >
-        <img
-          :src="product.image"
-          :alt="product.name"
-          class="h-44 w-44 object-contain"
-          loading="lazy"
-          width="176"
-          height="176"
-        />
+        <button
+          type="button"
+          class="cursor-zoom-in"
+          :aria-label="`Ver ${product.name} en tamaño completo`"
+          @click="openZoom(product)"
+        >
+          <img
+            :src="product.image"
+            :alt="product.name"
+            class="h-44 w-44 object-contain"
+            loading="lazy"
+            width="176"
+            height="176"
+          />
+        </button>
         <h3
           class="mt-6 font-sans text-sm font-extrabold uppercase tracking-wide"
         >
@@ -68,5 +103,38 @@ const sorted = computed(() => sortProducts(props.products, order.value));
         </p>
       </li>
     </ul>
+
+    <div
+      v-if="zoomed"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-ink/80 p-4"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="zoomed.name"
+      @click.self="closeZoom"
+    >
+      <button
+        type="button"
+        class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center bg-white text-xl font-extrabold text-ink"
+        aria-label="Cerrar"
+        @click="closeZoom"
+      >
+        ✕
+      </button>
+      <figure
+        class="flex max-h-full max-w-3xl flex-col items-center gap-4"
+        @click.self="closeZoom"
+      >
+        <img
+          :src="zoomed.image"
+          :alt="zoomed.name"
+          class="max-h-[80vh] w-auto max-w-full bg-white object-contain p-4"
+        />
+        <figcaption
+          class="bg-white px-4 py-2 text-center text-sm font-extrabold uppercase tracking-wide"
+        >
+          {{ zoomed.name }}
+        </figcaption>
+      </figure>
+    </div>
   </div>
 </template>
