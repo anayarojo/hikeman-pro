@@ -58,11 +58,11 @@ onBeforeUnmount(() => {
       </select>
     </div>
 
-    <ul class="grid grid-cols-1 gap-px bg-line sm:grid-cols-2 lg:grid-cols-3">
+    <ul class="-mb-px -mr-px grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
       <li
         v-for="product in sorted"
         :key="product.id"
-        class="flex flex-col items-center bg-white p-8 text-center"
+        class="flex flex-col items-center border-b border-r border-line bg-white p-8 text-center"
       >
         <button
           type="button"
