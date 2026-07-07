@@ -1,43 +1,30 @@
-# Astro Starter Kit: Minimal
+# HikeMan Pro
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Catálogo web de equipo de senderismo: viboreras, bastones, lámparas, mochilas y guías.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Stack
 
-## 🚀 Project Structure
+- [Astro 5](https://astro.build) — sitio estático, ruta dinámica por categoría
+- [Vue 3](https://vuejs.org) — isla interactiva `ProductGrid` (ordenamiento por precio)
+- [Tailwind CSS 4](https://tailwindcss.com) — tokens del sistema de diseño en `src/styles/global.css`
+- [Vitest](https://vitest.dev) — tests de `src/lib` y de integridad del catálogo
 
-Inside of your Astro project, you'll see the following folders and files:
+## Comandos
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+| Comando         | Acción                                  |
+| --------------- | --------------------------------------- |
+| `npm install`   | Instala dependencias                    |
+| `npm run dev`   | Servidor de desarrollo en `:4321`       |
+| `npm test`      | Corre los tests con Vitest              |
+| `npm run build` | Build de producción en `./dist/`        |
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Contenido
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El catálogo vive en `src/data/products.ts`. Para agregar un producto, añade una
+entrada a `PRODUCTS` con una categoría existente; los tests de
+`tests/products.test.ts` validan la integridad (ids únicos, precios > 0,
+unidad `C/U` o `PAR`).
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Las imágenes de producto van en `public/products/` (fondo blanco, producto
+aislado, formato cuadrado). Mientras no haya fotografía real se usa
+`placeholder.svg`.
