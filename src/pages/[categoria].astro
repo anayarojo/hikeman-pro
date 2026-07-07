@@ -2,7 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PromoBanner from "../components/PromoBanner.astro";
 import ProductGrid from "../components/ProductGrid.vue";
-import { CATEGORIES, PRODUCTS } from "../data/products";
+import { CATEGORIES, PRODUCTS, type Category } from "../data/products";
+
+interface Props {
+  category: Category;
+}
 
 export function getStaticPaths() {
   return CATEGORIES.map((category) => ({
