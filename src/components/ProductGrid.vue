@@ -1,8 +1,17 @@
 <script setup lang="ts">
-import { computed, onBeforeUnmount, ref, watch } from "vue";
-import type { Product } from "../data/products";
-import { formatPrice } from "../lib/format";
-import { sortProducts, type SortOrder } from "../lib/sortProducts";
+import {
+  computed,
+  onBeforeUnmount,
+  ref,
+  watch,
+} from 'vue';
+
+import type { Product } from '../data/products';
+import { formatPrice } from '../lib/format';
+import {
+  type SortOrder,
+  sortProducts,
+} from '../lib/sortProducts';
 
 const props = defineProps<{ products: Product[] }>();
 
@@ -142,7 +151,7 @@ onBeforeUnmount(() => {
           class="max-h-[80vh] w-auto max-w-full bg-white object-contain p-4"
         />
         <figcaption
-          class="bg-white px-4 py-2 text-center text-sm font-extrabold uppercase tracking-wide"
+          class="bg-brand text-black px-4 py-2 text-center text-sm font-extrabold uppercase tracking-wide"
         >
           {{ zoomed.name }}
         </figcaption>
