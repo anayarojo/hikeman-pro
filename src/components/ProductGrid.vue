@@ -135,7 +135,7 @@ onBeforeUnmount(() => {
     >
       <button
         type="button"
-        class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center bg-white text-xl font-extrabold text-ink"
+        class="absolute right-4 top-4 flex h-10 w-10 items-center justify-center bg-carbon text-white text-xl font-extrabold text-ink"
         aria-label="Cerrar"
         @click="closeZoom"
       >
