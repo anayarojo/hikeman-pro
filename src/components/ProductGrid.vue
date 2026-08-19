@@ -12,6 +12,7 @@ import {
   type SortOrder,
   sortProducts,
 } from '../lib/sortProducts';
+import { buildWhatsAppUrl } from '../lib/whatsapp';
 
 const props = defineProps<{ products: Product[] }>();
 
@@ -30,6 +31,10 @@ function closeZoom() {
 
 function onKeydown(event: KeyboardEvent) {
   if (event.key === "Escape") closeZoom();
+}
+
+function contactUrl(product: Product) {
+  return buildWhatsAppUrl(`Hola, me interesa: ${product.name}`);
 }
 
 watch(zoomed, (value) => {
@@ -122,6 +127,30 @@ onBeforeUnmount(() => {
         >
           {{ product.promo }}
         </p>
+        <a
+          :href="contactUrl(product)"
+          target="_blank"
+          rel="noopener"
+          :aria-label="`Me interesa: ${product.name}`"
+          class="mt-6 inline-flex items-center gap-2 bg-carbon px-5 py-2 font-display text-sm uppercase tracking-wide text-white transition-colors hover:bg-steel"
+        >
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M4 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6l-4 4v-4H5a1 1 0 0 1-1-1V5z"
+            ></path>
+            <path d="M8 10h.01M12 10h.01M16 10h.01"></path>
+          </svg>
+          Me interesa
+        </a>
       </li>
     </ul>
 
