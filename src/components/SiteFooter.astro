@@ -1,5 +1,6 @@
 ---
 import Icon from "./Icon.astro";
+import { buildWhatsAppUrl } from "../lib/whatsapp";
 
 const benefits = [
   { icon: "shield", label: "Protección" },
@@ -35,7 +36,7 @@ const benefits = [
         Equípate, explora y <span class="text-brand">vive la aventura</span>
       </p>
       <a
-        href="https://wa.me/526622782474?text=Hola%2C%20me%20interesa%20su%20equipo%20de%20senderismo"
+        href={buildWhatsAppUrl("Hola, me interesa su equipo de senderismo")}
         target="_blank"
         rel="noopener"
         class="flex items-center gap-3 bg-brand px-8 py-4 font-display text-2xl uppercase text-ink hover:bg-gold"
