@@ -117,13 +117,13 @@ onBeforeUnmount(() => {
         </p>
         <p
           v-if="product.promoPrice"
-          class="mt-2 bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-white"
+          class="mt-2 bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-brand"
         >
           Precio especial
         </p>
         <p
           v-if="product.promo"
-          class="mt-2 bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-white"
+          class="mt-2 bg-ink px-3 py-1 text-xs font-extrabold uppercase tracking-widest text-brand"
         >
           {{ product.promo }}
         </p>
