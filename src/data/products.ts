@@ -22,6 +22,7 @@ export interface Product {
   promo?: string;
   promoPrice?: number; // precio especial; tacha el precio normal
   featured?: boolean;
+  status?: "disponible" | "agotado"; // sin estado explícito se considera disponible
 }
 
 export const CATEGORIES: Category[] = [
@@ -55,9 +56,9 @@ const PLACEHOLDER = "/products/placeholder.svg";
 
 export const PRODUCTS: Product[] = [
   // Bastones
-  { id: "bas-t-negro", category: "bastones", name: "Bastones Tipo T Negros Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-negros.webp", featured: true },
+  { id: "bas-t-negro", status: "agotado", category: "bastones", name: "Bastones Tipo T Negros Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-negros.webp", featured: true },
   { id: "bas-t-rojo", category: "bastones", name: "Bastones Tipo T Rojos Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-rojos.webp" },
-  { id: "bas-t-azul", category: "bastones", name: "Bastones Tipo T Azules Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-azules.webp" },
+  { id: "bas-t-azul", status: "agotado", category: "bastones", name: "Bastones Tipo T Azules Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-azules.webp" },
   { id: "bas-negro", category: "bastones", name: "Bastones Negros Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-negros.webp", featured: true },
   { id: "bas-rojo", category: "bastones", name: "Bastones Rojos Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-rojos.webp" },
   { id: "bas-azul", category: "bastones", name: "Bastones Azules Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-azules.webp" },
@@ -71,10 +72,10 @@ export const PRODUCTS: Product[] = [
   { id: "laser-verde", category: "iluminacion", name: "Láser Potente Recargable Verde", price: 150, unit: "C/U", image: "/products/laser-verde.webp" },
   // Mochilas
   { id: "moc-acampar-80l", category: "mochilas", name: "Mochila Para Acampar 80L Negra", price: 650, unit: "C/U", image: "/products/mochila-acampar-80l.webp", promoPrice: 500, featured: true },
-  { id: "moc-tactica-negra", category: "mochilas", name: "Mochila Táctica 40L Negra", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-negra.webp" },
+  { id: "moc-tactica-negra", status: "agotado", category: "mochilas", name: "Mochila Táctica 40L Negra", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-negra.webp" },
   { id: "moc-tactica-cafe", category: "mochilas", name: "Mochila Táctica 40L Café", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-cafe.webp" },
   { id: "moc-tactica-verde", category: "mochilas", name: "Mochila Táctica 40L Verde", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-verde.webp" },
-  { id: "moc-tactica-militar", category: "mochilas", name: "Mochila Táctica 40L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-militar-1.webp", featured: true },
+  { id: "moc-tactica-militar", status: "agotado", category: "mochilas", name: "Mochila Táctica 40L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-militar-1.webp", featured: true },
   { id: "moc-tactica-militar-20l-1", category: "mochilas", name: "Mochila Táctica 20L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-militar-20l-1.webp", featured: true },
   { id: "moc-tactica-militar-20l-2", category: "mochilas", name: "Mochila Táctica 20L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-militar-20l-2.webp", featured: true },
   { id: "moc-senderismo-18l", category: "mochilas", name: "Mochila de Senderismo 18L", price: 300, unit: "C/U", image: "/products/mochila-18l.webp", featured: true },
@@ -82,7 +83,7 @@ export const PRODUCTS: Product[] = [
   // Protección (Viboreras)
   { id: "vib-negras", category: "viboreras", name: "Polainas Viboreras Negras", price: 300, unit: "PAR", image: "/products/viboreras-negras.webp", featured: true },
   { id: "vib-verdes", category: "viboreras", name: "Polainas Viboreras Verdes", price: 300, unit: "PAR", image: "/products/viboreras-verdes.webp" },
-  { id: "vib-militares", category: "viboreras", name: "Polainas Viboreras Patrones Militares", price: 300, unit: "PAR", image: "/products/viboreras-con-patrones.webp" },
+  { id: "vib-militares", status: "agotado", category: "viboreras", name: "Polainas Viboreras Patrones Militares", price: 300, unit: "PAR", image: "/products/viboreras-con-patrones.webp" },
   { id: "vib-camuflaje", category: "viboreras", name: "Polainas Viboreras Reforzadas con Camuflaje", price: 350, unit: "PAR", image: "/products/viboreras-reforzadas-con-camuflaje.webp", featured: true },
   { id: "vib-polainas-camuflaje", category: "viboreras", name: "Polainas de Senderismo con Camuflaje", price: 400, unit: "PAR", image: "/products/polainas-senderismo-camuflaje.webp", featured: true },
   { id: "vib-polainas-negras", category: "viboreras", name: "Polainas de Senderismo Negras", price: 400, unit: "PAR", image: "/products/polainas-senderismo-negras.webp", featured: true },

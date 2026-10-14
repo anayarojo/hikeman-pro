@@ -80,8 +80,8 @@ onBeforeUnmount(() => {
       >
         <button
           type="button"
-          class="cursor-zoom-in"
-          :aria-label="`Ver ${product.name} en tamaño completo`"
+          class="relative cursor-zoom-in"
+          :aria-label="`Ver ${product.name} en tamaño completo${product.status === 'agotado' ? ' — Agotado' : ''}`"
           @click="openZoom(product)"
         >
           <img
@@ -92,6 +92,12 @@ onBeforeUnmount(() => {
             width="176"
             height="176"
           />
+          <span
+            v-if="product.status === 'agotado'"
+            class="pointer-events-none absolute inset-x-0 top-1/2 -translate-y-1/2 bg-black/70 px-3 py-3 text-center font-sans text-2xl font-normal text-white"
+          >
+            Agotado
+          </span>
         </button>
         <h3
           class="mt-6 font-sans text-sm font-extrabold uppercase tracking-wide"
@@ -128,6 +134,7 @@ onBeforeUnmount(() => {
           {{ product.promo }}
         </p>
         <a
+          v-if="product.status !== 'agotado'"
           :href="contactUrl(product)"
           target="_blank"
           rel="noopener"
@@ -183,6 +190,7 @@ onBeforeUnmount(() => {
           class="bg-brand text-black px-4 py-2 text-center text-sm font-extrabold uppercase tracking-wide"
         >
           {{ zoomed.name }}
+          <span v-if="zoomed.status === 'agotado'" class="mt-1 block">Agotado</span>
         </figcaption>
       </figure>
     </div>
