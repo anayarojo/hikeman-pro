@@ -56,7 +56,7 @@ const PLACEHOLDER = "/products/placeholder.svg";
 
 export const PRODUCTS: Product[] = [
   // Bastones
-  { id: "bas-t-negro", status: "agotado", category: "bastones", name: "Bastones Tipo T Negros Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-negros.webp", featured: true },
+  { id: "bas-t-negro", status: "agotado", category: "bastones", name: "Bastones Tipo T Negros Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-negros.webp" },
   { id: "bas-t-rojo", category: "bastones", name: "Bastones Tipo T Rojos Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-rojos.webp" },
   { id: "bas-t-azul", status: "agotado", category: "bastones", name: "Bastones Tipo T Azules Ajustables 52-110cm", price: 300, unit: "PAR", image: "/products/bastones-tipo-t-azules.webp" },
   { id: "bas-negro", category: "bastones", name: "Bastones Negros Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-negros.webp", featured: true },
