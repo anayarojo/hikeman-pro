@@ -62,6 +62,7 @@ export const PRODUCTS: Product[] = [
   { id: "bas-negro", category: "bastones", name: "Bastones Negros Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-negros.webp", featured: true },
   { id: "bas-rojo", category: "bastones", name: "Bastones Rojos Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-rojos.webp" },
   { id: "bas-azul", category: "bastones", name: "Bastones Azules Ajustables 63-135cm", price: 300, unit: "PAR", image: "/products/bastones-azules.webp" },
+  { id: "bas-trekking-plegable-negro", category: "bastones", name: "Bastón Trekking Plegable Negro", price: 250, unit: "C/U", image: "/products/baston-trekking-plegable.webp" },
   // Iluminación y Equipo
   { id: "lam-minera-6000", category: "iluminacion", name: "Lámpara de Cabeza 6000 mAh", price: 400, unit: "C/U", image: "/products/lampara-600-mah.webp", featured: true },
   { id: "lam-multicolor-4800", category: "iluminacion", name: "Lámpara de Cabeza Multicolor 4800 mAh", price: 400, unit: "C/U", image: "/products/lampara-multi-color.webp", featured: true },
@@ -80,6 +81,9 @@ export const PRODUCTS: Product[] = [
   { id: "moc-tactica-militar-20l-2", category: "mochilas", name: "Mochila Táctica 20L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-militar-20l-2.webp", featured: true },
   { id: "moc-senderismo-18l", category: "mochilas", name: "Mochila de Senderismo 18L", price: 300, unit: "C/U", image: "/products/mochila-18l.webp", featured: true },
   { id: "moc-hidratacion-3l", category: "mochilas", name: "Mochila de Hidratación 3L", price: 300, unit: "C/U", image: "/products/mochila-hidratacion-3l.webp", featured: true },
+  { id: "bol-hidratacion-3l", category: "mochilas", name: "Bolsa de hidratación 3L", price: 150, unit: "C/U", image: "/products/bolsa-hidratacion-3l.webp" },
+  { id: "moc-senderismo-chica-10l", category: "mochilas", name: "Mochila senderismo chica 10L", price: 100, unit: "C/U", image: "/products/mochila-senderismo-chica-10l.webp" },
+  { id: "moc-senderismo-mediana-20l", category: "mochilas", name: "Mochila senderismo mediana 20L", price: 200, unit: "C/U", image: "/products/mochila-senderismo-mediana-20l.webp" },
   // Protección (Viboreras)
   { id: "vib-negras", category: "viboreras", name: "Polainas Viboreras Negras", price: 300, unit: "PAR", image: "/products/viboreras-negras.webp", featured: true },
   { id: "vib-verdes", category: "viboreras", name: "Polainas Viboreras Verdes", price: 300, unit: "PAR", image: "/products/viboreras-verdes.webp" },
