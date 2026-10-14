@@ -4,8 +4,9 @@ import PromoBanner from "../components/PromoBanner.astro";
 import ProductGrid from "../components/ProductGrid.vue";
 import { CATEGORIES, PRODUCTS } from "../data/products";
 
-const featured = PRODUCTS.filter((p) => p.featured);
-const fillers = PRODUCTS.filter((p) => !p.featured);
+const available = PRODUCTS.filter((p) => p.status !== "agotado");
+const featured = available.filter((p) => p.featured);
+const fillers = available.filter((p) => !p.featured);
 const showcase = [...featured, ...fillers].slice(0, 9);
 ---
 
