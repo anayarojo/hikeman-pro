@@ -79,6 +79,7 @@ export const PRODUCTS: Product[] = [
   { id: "moc-tactica-militar", category: "mochilas", name: "Mochila Táctica 40L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-20l-militar-1.webp" },
   { id: "moc-tactica-militar-20l-1", category: "mochilas", name: "Mochila Táctica 20L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-militar-20l-1.webp" },
   { id: "moc-tactica-militar-20l-2", category: "mochilas", name: "Mochila Táctica 20L Militar", price: 400, unit: "C/U", image: "/products/mochila-tactica-militar-20l-2.webp" },
+  { id: "moc-tactica-35l-negra", category: "mochilas", name: "Mochila Táctica 35L Negra Reforzada e Impermeable", price: 450, unit: "C/U", image: "/products/mochila-tactica-35l-negra-reforzada-impermeable.webp" },
   { id: "moc-senderismo-18l", status: "agotado", category: "mochilas", name: "Mochila de Senderismo 18L", price: 300, unit: "C/U", image: "/products/mochila-18l.webp" },
   { id: "moc-hidratacion-3l", category: "mochilas", name: "Mochila de Hidratación 3L", price: 300, unit: "C/U", image: "/products/mochila-hidratacion-3l.webp", featured: true },
   { id: "bol-hidratacion-3l", category: "mochilas", name: "Bolsa de hidratación 3L", price: 150, unit: "C/U", image: "/products/bolsa-hidratacion-3l.webp" },
